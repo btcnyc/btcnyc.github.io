@@ -1,44 +1,20 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
+import React from 'react';
 
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+export default function Home() {
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
+    <main style={{maxWidth:920, margin:'0 auto', padding:'4rem 1rem'}}>
+      <h1>🗽 The Bitcoin Network NYC</h1>
+      <p><b>Hosting Bitcoin workshops and community events in New York City.</b></p>
+      <p>Hands-on classes, node installs, Lightning, privacy, mining, and more — open to all skill levels.</p>
+
+      <div style={{display:'grid', gap:'12px', gridTemplateColumns:'repeat(auto-fit, minmax(220px, 1fr))', marginTop:24}}>
+        <a className="button button--primary button--lg" href="https://btcnyc.github.io/classes/">📚 Classes & Guides</a>
+        <a className="button button--secondary button--lg" href="https://www.meetup.com/bitcoin-network-nyc/">🎟️ Meetup</a>
+        <a className="button button--secondary button--lg" href="https://luma.com/btcnyc">🎫 Luma</a>
+        <a className="button button--secondary button--lg" href="https://t.me/+M79B-75J2YU3OTRh">💬 Telegram</a>
+        <a className="button button--secondary button--lg" href="https://x.com/BTCNetworkNYC">🐦 X (Twitter)</a>
+        <a className="button button--secondary button--lg" href="https://bitcoin-network-nyc.com/">💸 Donate (BTCPay)</a>
       </div>
-    </header>
-  );
-}
-
-export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
+    </main>
   );
 }

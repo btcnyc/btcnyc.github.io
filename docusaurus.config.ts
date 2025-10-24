@@ -1,150 +1,51 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
-
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
-const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
-
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
-
-  // Set the production url of your site here
+// docusaurus.config.js
+export default {
+  title: 'Bitcoin Network NYC',
+  tagline: 'Learn. Build. Connect. Empower.',
   url: 'https://btcnyc.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
-
-  onBrokenLinks: 'throw',
-
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
-
-  presets: [
-    [
-      'classic',
-      {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
-      } satisfies Preset.Options,
-    ],
-  ],
-
+  favicon: 'img/favicon.ico',
+  organizationName: 'btcnyc',      // GitHub org
+  projectName: 'btcnyc.github.io', // This repo
+  trailingSlash: false,
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
-    colorMode: {
-      respectPrefersColorScheme: true,
-    },
     navbar: {
-      title: 'My Site',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
-      },
+      title: 'BTC NYC',
+      logo: { alt: 'BTC NYC', src: 'img/logo.png' },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Tutorial',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
+        { label: 'Classes', href: 'https://btcnyc.github.io/classes/' },
+        { label: 'Meetup', href: 'https://www.meetup.com/bitcoin-network-nyc/' },
+        { label: 'Luma', href: 'https://luma.com/btcnyc' },
+        { label: 'Telegram', href: 'https://t.me/+M79B-75J2YU3OTRh', position: 'right' },
+        { label: 'Donate', href: 'https://bitcoin-network-nyc.com/', position: 'right' },
       ],
     },
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
+        { title: 'Learn', items: [{label:'Classes', href:'https://btcnyc.github.io/classes/'}]},
+        { title: 'Community', items: [
+          {label:'Telegram', href:'https://t.me/+M79B-75J2YU3OTRh'},
+          {label:'X (Twitter)', href:'https://x.com/BTCNetworkNYC'},
+          {label:'Nostr', href:'https://njump.me/npub1xyu3s3zt3v44l3rj5gn90xk33n387sgtjepcvxnqvd5rt58fpzzsx0055n'},
+          {label:'LinkedIn', href:'https://www.linkedin.com/company/the-bitcoin-network-nyc/'},
+        ]},
+        { title: 'Support', items: [
+          {label:'Donate (BTCPay)', href:'https://bitcoin-network-nyc.com/'},
+          {label:'Venmo', href:'https://account.venmo.com/u/harrisonfriedes'},
+        ]},
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} Bitcoin Network NYC`,
     },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-    },
-  } satisfies Preset.ThemeConfig,
+    colorMode: { defaultMode: 'dark', respectPrefersColorScheme: true },
+    prism: { /* keep defaults */ },
+  },
+  presets: [
+    ['@docusaurus/preset-classic',
+      {
+        docs: false, blog: false,
+        theme: { customCss: require.resolve('./src/css/custom.css') },
+      }
+    ],
+  ],
 };
-
-export default config;
