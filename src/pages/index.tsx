@@ -15,6 +15,7 @@ export default function Home() {
         <a className="button button--secondary button--lg" href="https://x.com/BTCNetworkNYC">🐦 X (Twitter)</a>
         <a className="button button--secondary button--lg" href="https://bitcoin-network-nyc.com/">💸 Donate (BTCPay)</a>
         <a className="button button--secondary button--lg" href="https://account.venmo.com/u/harrisonfriedes">💵 Venmo @harrisonfriedes</a>
+        <a className="button button--secondary button--lg" href="https://github.com/btcnyc">🐙 GitHub</a>
         <a className="button button--secondary button--lg" href="https://www.linkedin.com/company/the-bitcoin-network-nyc/">🔗 LinkedIn</a>
         <a className="button button--secondary button--lg" href="https://njump.me/npub1xyu3s3zt3v44l3rj5gn90xk33n387sgtjepcvxnqvd5rt58fpzzsx0055n">🧡 Nostr</a>
       </div>
