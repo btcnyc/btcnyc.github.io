@@ -1,0 +1,68 @@
+name: "🎨 Website design request"
+description: Capture the context, goals, and assets needed for website design work.
+title: "[Design] <Short headline>"
+labels: ["design"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the BTC NYC site! Fill in the sections below so the design squad understands the challenge, goals, and desired outcomes.
+
+  - type: input
+    id: area
+    attributes:
+      label: Primary page or surface
+      description: Where will this design show up?
+      placeholder: "e.g., Homepage hero, Event detail page, Global nav"
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: Background & problem
+      description: What triggered this work? Include user pain points, metrics, or research insights.
+      placeholder: "Traffic to the landing page is rising, but users bounce before discovering upcoming events."
+    validations:
+      required: true
+
+  - type: textarea
+    id: goals
+    attributes:
+      label: Goals & success criteria
+      description: Spell out what success looks like and any metrics or milestones you expect to impact.
+      placeholder: "Increase event RSVP conversions by 15% and reduce mobile bounce rate."
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope, constraints, or must-haves
+      description: List content that must be included, technical or brand constraints, and known dependencies.
+      placeholder: "Must use BTC orange and integrate with the existing RSVP module; copy provided in Notion doc."
+
+  - type: dropdown
+    id: experience
+    attributes:
+      label: Experience level
+      description: How polished does the end result need to be?
+      options:
+        - Exploration / wireframe
+        - High-fidelity mockup
+        - Production-ready assets
+      default: 0
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Inspiration & references
+      description: Add design inspiration, competitive examples, or brand guidance links.
+      placeholder: "Attach Figma frames, share screenshots, or link to similar experiences."
+
+  - type: textarea
+    id: handoff
+    attributes:
+      label: Deliverables & handoff
+      description: Note expected deliverables, owners, or timelines so everyone knows what’s next.
+      placeholder: "Figma mockups and mobile specs by 2024-06-01; handoff to @andrew for build."
