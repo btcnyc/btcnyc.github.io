@@ -2,7 +2,7 @@
   <img src="static/img/logo.png" alt="Bitcoin Network NYC logo" width="200" />
 </p>
 
-# 🗽 Bitcoin Network NYC Website
+<h1 align="center">🗽 Bitcoin Network NYC Website</h1>
 
 This is the official website for **Bitcoin Network NYC** — a community hosting Bitcoin workshops and events across New York City.
 It’s built with [Docusaurus](https://docusaurus.io), a modern React-based static site generator.
