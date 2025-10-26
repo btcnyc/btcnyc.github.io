@@ -3,7 +3,12 @@ import React from 'react';
 export default function Home() {
   return (
     <main style={{maxWidth:920, margin:'0 auto', padding:'4rem 1rem'}}>
-      <h1>🗽 The Bitcoin Network NYC</h1>
+      <img
+        src="/img/logo.png"
+        alt="Bitcoin Network NYC logo"
+        style={{display:'block', margin:'0 auto 2rem', maxWidth:200, width:'100%'}}
+      />
+      <h1 style={{textAlign:'center'}}>🗽 The Bitcoin Network NYC</h1>
       <p><b>Hosting Bitcoin workshops and community events in New York City.</b></p>
       <p>Hands-on classes, node installs, Lightning, privacy, mining, and more — open to all skill levels.</p>
 
