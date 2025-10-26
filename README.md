@@ -1,3 +1,5 @@
+![Bitcoin Network NYC logo](static/img/logo.png)
+
 # 🗽 Bitcoin Network NYC Website
 
 This is the official website for **Bitcoin Network NYC** — a community hosting Bitcoin workshops and events across New York City.
