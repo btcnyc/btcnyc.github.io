@@ -1,4 +1,6 @@
-<img src="static/img/logo.png" alt="Bitcoin Network NYC logo" width="200" />
+<p align="center">
+  <img src="static/img/logo.png" alt="Bitcoin Network NYC logo" width="200" />
+</p>
 
 # 🗽 Bitcoin Network NYC Website
 
