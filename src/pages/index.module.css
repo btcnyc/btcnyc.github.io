@@ -39,3 +39,19 @@
   min-height: 56px;
   padding: 0.75rem 1rem;
 }
+
+.categories {
+  display: grid;
+  gap: 28px;
+  margin-top: 20px;
+}
+
+.category {
+  border-radius: 8px;
+}
+
+.categoryTitle {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
