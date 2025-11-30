@@ -1,6 +1,6 @@
 // docusaurus.config.js
 export default {
-  title: 'Bitcoin Network NYC',
+  title: 'Freedom Lab NYC',
   tagline: 'Learn. Build. Connect. Empower.',
   url: 'https://btcnyc.github.io',
   baseUrl: '/',
