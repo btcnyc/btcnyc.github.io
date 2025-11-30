@@ -1,10 +1,10 @@
 // docusaurus.config.js
 export default {
-  title: 'Bitcoin Network NYC',
+  title: 'Freedom Lab NYC',
   tagline: 'Learn. Build. Connect. Empower.',
   url: 'https://btcnyc.github.io',
   baseUrl: '/',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/Freedom Lab NYC Logo - Circle.png',
   organizationName: 'btcnyc',      // GitHub org
   projectName: 'btcnyc.github.io', // This repo
   trailingSlash: false,
