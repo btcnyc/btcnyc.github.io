@@ -10,8 +10,8 @@ export default {
   trailingSlash: false,
   themeConfig: {
     navbar: {
-      title: 'BTC NYC',
-      logo: { alt: 'BTC NYC', src: 'img/logo.png' },
+      title: 'Freedom Lab NYC',
+      logo: { alt: 'Freedom Lab NYC', src: 'img/Freedom Lab NYC Logo - Circle.png' },
       items: [
         { label: 'Classes', href: 'https://btcnyc.github.io/classes/' },
         { label: 'Meetup', href: 'https://www.meetup.com/bitcoin-network-nyc/' },
@@ -35,7 +35,7 @@ export default {
           {label:'Venmo', href:'https://account.venmo.com/u/harrisonfriedes'},
         ]},
       ],
-      copyright: `© ${new Date().getFullYear()} Bitcoin Network NYC`,
+      copyright: `© ${new Date().getFullYear()} Freedom Lab NYC`,
     },
     colorMode: { defaultMode: 'dark', respectPrefersColorScheme: true },
     prism: { /* keep defaults */ },
