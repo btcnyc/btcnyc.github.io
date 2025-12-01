@@ -2,7 +2,7 @@
 export default {
   title: 'Freedom Lab NYC',
   tagline: 'Learn. Build. Connect. Empower.',
-  url: 'https://btcnyc.github.io',
+  url: 'https://freedomlab.nyc',
   baseUrl: '/',
   favicon: 'img/Freedom Lab NYC Logo - Circle.png',
   organizationName: 'btcnyc',      // GitHub org
