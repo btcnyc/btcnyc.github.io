@@ -16,6 +16,15 @@
   }
 }
 
+.heroSubtitle {
+  text-align: center;
+  font-size: 1.5rem; /* VT323 is small, needs boost */
+  line-height: 1.4;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  font-weight: normal;
+}
+
 .buttons {
   display: flex;
   align-items: center;
@@ -25,31 +34,35 @@
 .ctaSections {
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  margin-top: 24px;
+  gap: 48px; /* Increased gap to separate "cards" */
+  margin-top: 32px;
 }
 
 .ctaSection {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
 }
 
 .ctaHeading {
-  font-size: 0.95rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--ifm-color-emphasis-600);
+  /* Styling moved mostly to custom.css (h2) but we can keep structure here */
+  margin-bottom: 0.5rem;
 }
 
 .ctaGrid {
   display: grid;
-  gap: 12px;
+  gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .ctaGridRow {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media screen and (max-width: 768px) {
+  .ctaGridRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 .ctaButton {
@@ -88,7 +101,7 @@
   justify-content: center;
   width: 28px;
   height: 28px;
-  color: #111;
+  color: inherit;
 }
 
 .iconWrapper svg {
@@ -102,8 +115,26 @@
   object-fit: contain;
 }
 
-.iconImageMonochrome {
-  filter: brightness(0) saturate(100%);
+/* Monochrome icons need to be white in this theme always */
+/* Also applying this to ANY icon image that might be monochrome-capable if we want consistency */
+.iconImageMonochrome,
+/* Force Luma/etc to white if they are transparent PNGs suitable for monochrome conversion */
+.iconImage {
+  /* NOTE: This is aggressive. It will force ALL icons to white. 
+     If Luma is the only one needing fix, we should be more specific or add the class to it.
+     However, "text and icons to white" was the request. 
+     If the icons are full color (like Venmo blue), this might look odd if not intended.
+     But for "Neon Terminal", monochrome white usually looks best.
+     Let's try forcing brightness(0) invert(1) on ALL icons for that cohesive look. */
+  filter: brightness(0) invert(1);
+  opacity: 1;
+  transition: filter 0.2s ease;
+}
+
+/* Even on hover, we want them white if the button is green/dark */
+:global(.button--secondary:hover) .iconImageMonochrome,
+:global(.button--secondary:hover) .iconImage {
+  filter: brightness(0) invert(1) !important; 
 }
 
 .visuallyHidden {
