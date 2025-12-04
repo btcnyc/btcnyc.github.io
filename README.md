@@ -1,19 +1,19 @@
 <p align="center">
-  <img src="static/img/logo.png" alt="Bitcoin Network NYC logo" width="200" />
+  <img src="static/img/Freedom Lab NYC Logo - Circle.png" alt="Freedom Lab NYC logo" width="200" />
 </p>
 
-<h1 align="center">🗽 Bitcoin Network NYC Website</h1>
+<h1 align="center">🗽 Freedom Lab NYC Website</h1>
 
-This is the official website for **Bitcoin Network NYC** — a community hosting Bitcoin workshops and events across New York City.
-It’s built with [Docusaurus](https://docusaurus.io), a modern React-based static site generator.
+This is the official website for **Freedom Lab NYC** — New York City's premier Freedom Tech community space and educational center.
+It's built with [Docusaurus](https://docusaurus.io), a modern React-based static site generator.
 
-🌐 **Live site:** [https://btcnyc.github.io](https://btcnyc.github.io)
+🌐 **Live site:** [https://freedomlab.nyc](https://freedomlab.nyc)
 
 ---
 
 ## 🧭 About
 
-The site serves as the central hub for all things BTC NYC:
+The site serves as the central hub for Freedom Lab NYC:
 
 * Info about our mission and community
 * Links to our meetups, Telegram, and socials
@@ -25,7 +25,7 @@ The site serves as the central hub for all things BTC NYC:
 
 * **Framework:** [Docusaurus 3](https://docusaurus.io/)
 * **Language:** TypeScript
-* **Styling:** Infima CSS (customized with Bitcoin NYC theme)
+* **Styling:** Infima CSS (customized with Freedom Lab NYC theme)
 * **Hosting:** GitHub Pages (via GitHub Actions)
 
 ---
@@ -77,9 +77,9 @@ btcnyc.github.io/
 ├── .github/workflows/pages.yml   # CI/CD pipeline for Pages deployment
 ├── src/                          # React/TS pages, CSS, components
 │   ├── pages/                    # index.tsx, 404.tsx, etc.
-│   └── css/custom.css            # Custom Bitcoin NYC theme
+│   └── css/custom.css            # Custom Freedom Lab NYC theme
 ├── static/img/                   # Logo, favicon, social previews
-├── docusaurus.config.js          # Global site config (navbar, footer)
+├── docusaurus.config.ts          # Global site config (navbar, footer)
 └── README.md
 ```
 
@@ -87,7 +87,7 @@ btcnyc.github.io/
 
 ## 🤝 Contributing
 
-We welcome contributions from developers who want to improve or extend the BTC NYC website.
+We welcome contributions from developers who want to improve or extend the Freedom Lab NYC website.
 
 ### 🪜 Getting Started
 
@@ -112,7 +112,7 @@ We welcome contributions from developers who want to improve or extend the BTC N
 
 * Use **TypeScript** for all new components and pages.
 * Follow existing component structure and naming conventions.
-* Keep the design minimal and consistent with the orange/black BTC NYC theme.
+* Keep the design minimal and consistent with the Freedom Lab NYC theme.
 
 ### ✅ Before Opening a PR
 
@@ -135,7 +135,7 @@ We welcome contributions from developers who want to improve or extend the BTC N
 
 ## 👩‍💻 Maintainers
 
-Community-maintained by the **Bitcoin Network NYC** dev team.
+Community-maintained by the **Freedom Lab NYC** team.
 Questions or PRs welcome!
 
 ---
