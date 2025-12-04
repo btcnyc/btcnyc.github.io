@@ -107,6 +107,8 @@
 .iconWrapper svg {
   width: 20px;
   height: 20px;
+  color: #fff;
+  fill: currentColor;
 }
 
 .iconImage {

@@ -19,7 +19,7 @@
   /* Accent / typography */
   --ifm-font-family-base: 'VT323', monospace, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --ifm-font-family-monospace: 'VT323', monospace;
-  --ifm-heading-font-family: 'Press Start 2P', cursive;
+  --ifm-heading-font-family: 'Press Start 2P', 'Courier New', Consolas, monospace;
   
   --ifm-heading-color: var(--ifm-color-primary);
   --ifm-font-color-base: #fff;
