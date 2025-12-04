@@ -1,0 +1,65 @@
+site_name: BTC NYC Classes
+site_url: https://btcnyc.github.io/classes/
+site_description: Bitcoin Network NYC — class materials, guides, and workshop resources.
+repo_url: https://github.com/btcnyc/classes
+repo_name: btcnyc/classes
+edit_uri: edit/main/docs/
+
+use_directory_urls: true
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  features:
+    - navigation.indexes
+    - navigation.footer
+    - content.code.copy
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: orange
+      accent: orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: orange
+      accent: orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  logo: shared-assets/logos/btcnyc_logo.png
+  favicon: shared-assets/logos/btcnyc_favicon.png
+
+nav:
+  - Home: README.md
+  - Topics:
+      - Overview: topics/index.md
+      - Bitcoin Node:
+          - Getting Started:
+              - Event Page: topics/bitcoin-node/00-getting-started/index.md
+              - Lesson Plan: topics/bitcoin-node/00-getting-started/lesson.md
+          # - Using Your Node: topics/bitcoin-node/01-using-your-node/lesson.md
+      - Bitcoin Hardware Wallet:
+          - Beginner Build:
+              - Event Page: topics/bitcoin-hardware-wallet/00-beginners-hardware-wallet/index.md
+              - Lesson Plan: topics/bitcoin-hardware-wallet/00-beginners-hardware-wallet/lesson.md
+  - Teachers Lounge:
+      - Overview: teachers-lounge/index.md
+      - Run a Class (Runbook): teachers-lounge/run-a-class.md
+      - Event One-Pager Template: teachers-lounge/event-template.md
+      - Checklists: teachers-lounge/checklist.md
+      - Boilerplate Generator: teachers-lounge/boilerplate-prompt.md
+  - Resources: resources/index.md
+  - Contributing:
+    - Overview: contributing/index.md
+    - Markdown Basics: contributing/00-markdown-basics/lesson.md
+    # - Writing Great Lessons: contributing/01-writing-great-lessons/lesson.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true

@@ -1,5 +1,6 @@
 import React from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import Head from '@docusaurus/Head';
 import { FaGithub, FaTelegram, FaXTwitter, FaLinkedinIn } from 'react-icons/fa6';
 import { SiMeetup } from 'react-icons/si';
 import styles from './index.module.css';
@@ -180,7 +181,29 @@ export default function Home() {
   const heroLogo = useBaseUrl('img/Freedom Lab NYC Logo - Circle.png');
 
   return (
-    <main style={{ maxWidth: 920, margin: '0 auto', padding: '4rem 1rem' }}>
+    <>
+      <Head>
+        {/* Preconnect to Google Fonts domains for faster DNS/TCP */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        
+        {/* Preload the specific font CSS (only Press Start 2P for headings) */}
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Press+Start+2P:wght@400&display=swap"
+          as="style"
+          onLoad="this.onload=null; this.rel='stylesheet'"
+        />
+        
+        {/* Optional: Also preload VT323 if body text flashes too */}
+        <link
+          rel="preload"
+          href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+          as="style"
+          onLoad="this.onload=null; this.rel='stylesheet'"
+        />
+      </Head>
+      <main style={{ maxWidth: 920, margin: '0 auto', padding: '4rem 1rem' }}>
       <img
         src={heroLogo}
         alt="Freedom Lab NYC logo"
@@ -234,5 +257,6 @@ export default function Home() {
         ))}
       </div>
     </main>
+    </>
   );
 }
