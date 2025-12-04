@@ -133,7 +133,7 @@ const CTA_SECTIONS: SectionConfig[] = [
       },
       {
         label: 'Luma',
-        href: 'https://luma.com/btcnyc',
+        href: 'https://luma.com/freedomlab',
         Icon: LumaIcon,
       },
     ],
