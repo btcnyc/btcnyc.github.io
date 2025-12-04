@@ -107,7 +107,15 @@
 .iconWrapper svg {
   width: 20px;
   height: 20px;
-  color: #fff;
+  color: inherit;
+  fill: currentColor;
+  /* Ensure SVG icons are visible - inherit color from parent but ensure contrast */
+  opacity: 1;
+}
+
+/* Ensure SVG icons in buttons are visible - use button text color */
+:global(.button) .iconWrapper svg {
+  color: var(--ifm-button-color, #fff);
   fill: currentColor;
 }
 
@@ -115,28 +123,27 @@
   width: 24px;
   height: 24px;
   object-fit: contain;
+  opacity: 1;
+  /* Ensure visibility without forcing white - boost brightness slightly if needed */
+  filter: brightness(1.1) contrast(1.1);
+  transition: filter 0.2s ease;
 }
 
-/* Monochrome icons need to be white in this theme always */
-/* Also applying this to ANY icon image that might be monochrome-capable if we want consistency */
-.iconImageMonochrome,
-/* Force Luma/etc to white if they are transparent PNGs suitable for monochrome conversion */
-.iconImage {
-  /* NOTE: This is aggressive. It will force ALL icons to white. 
-     If Luma is the only one needing fix, we should be more specific or add the class to it.
-     However, "text and icons to white" was the request. 
-     If the icons are full color (like Venmo blue), this might look odd if not intended.
-     But for "Neon Terminal", monochrome white usually looks best.
-     Let's try forcing brightness(0) invert(1) on ALL icons for that cohesive look. */
+/* Monochrome icons that should be white (like Nostr) */
+.iconImageMonochrome {
   filter: brightness(0) invert(1);
   opacity: 1;
   transition: filter 0.2s ease;
 }
 
-/* Even on hover, we want them white if the button is green/dark */
-:global(.button--secondary:hover) .iconImageMonochrome,
-:global(.button--secondary:hover) .iconImage {
-  filter: brightness(0) invert(1) !important; 
+/* Preserve colored icons (Venmo blue, BTCPay, etc.) but ensure visibility */
+.iconImage:not(.iconImageMonochrome) {
+  filter: brightness(1.15) contrast(1.1) saturate(1.1);
+}
+
+/* On hover, slightly brighten for better visibility */
+:global(.button--secondary:hover) .iconImage:not(.iconImageMonochrome) {
+  filter: brightness(1.25) contrast(1.15) saturate(1.15);
 }
 
 .visuallyHidden {
