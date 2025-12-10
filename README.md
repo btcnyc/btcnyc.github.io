@@ -79,7 +79,7 @@ btcnyc.github.io/
 ├── classes-events.html          # Classes & events page
 ├── contact.html                 # Contact page
 ├── join.html                    # Join/membership page
-├── assets/                      # CSS stylesheets
+├── css/                         # CSS stylesheets
 │   ├── styles.css               # Global styles
 │   ├── home.css                 # Homepage styles
 │   ├── classes.css              # Classes page styles
@@ -106,7 +106,7 @@ We welcome contributions from developers who want to improve or extend the Freed
    git checkout -b feature/my-new-section
    ```
 3. Run the local dev server with `python3 -m http.server 8000`.
-4. Make your changes — edit HTML files directly, add/modify CSS in `assets/`, update JavaScript as needed.
+4. Make your changes — edit HTML files directly, add/modify CSS in `css/`, update JavaScript as needed.
 5. Test your changes locally in your browser.
 6. Commit and push your branch:
 
